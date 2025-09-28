@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://dl3ge3hyspk83"]
+
+[ext_resource type="PackedScene" uid="uid://b0rd3kgqktlqr" path="res://sky_sprite.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://bc65orfiey1rx" path="res://stork.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://bdotqy3qnw0gw" path="res://ground.tscn" id="3_h2yge"]
+
+[node name="Main" type="Node2D"]
+
+[node name="SkySprite" parent="." instance=ExtResource("1_ig7tw")]
+
+[node name="Stork" parent="." instance=ExtResource("2_0xm2m")]
+
+[node name="Ground" parent="." instance=ExtResource("3_h2yge")]
+position = Vector2(0, 345)
