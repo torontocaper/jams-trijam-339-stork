@@ -18,6 +18,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = -flap_impulse
 		input_locked = true
 		$AnimatedSprite2D.play("flap")
+		$AudioStreamPlayer2D.play()
 
 	move_and_slide()
 
