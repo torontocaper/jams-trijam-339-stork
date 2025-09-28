@@ -1,22 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://bdotqy3qnw0gw"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lv0v5"]
-size = Vector2(640, 360)
+[gd_scene load_steps=3 format=3 uid="uid://bdotqy3qnw0gw"]
 
 [sub_resource type="Gradient" id="Gradient_lv0v5"]
-offsets = PackedFloat32Array(0.068396226, 0.6886792, 1)
-colors = PackedColorArray(0.37018666, 0.44, 0.36519998, 1, 0.42, 0.3626, 0.24780001, 1, 0.35, 0.3371083, 0.2905, 1)
+offsets = PackedFloat32Array(0.44660193, 0.85194176, 1)
+colors = PackedColorArray(0.65882355, 0.78431374, 0.6509804, 1, 0.9647059, 0.92941177, 0.8039216, 1, 0.96, 0.96, 0.96, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_yh8r4"]
 gradient = SubResource("Gradient_lv0v5")
-width = 640
-height = 360
-fill_to = Vector2(0, 1)
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
 
 [node name="Ground" type="StaticBody2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_lv0v5")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-495, -172.5, -104, -162.5, 20, -83.5, 230, -103.5, 384, -219.5, 526, -244.5, 659, -133.5, 778, -53.5, 790, 251.5, -666, 242.5, -656, -88.5)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.42, 0.3626, 0.24780001, 1)
 texture = SubResource("GradientTexture2D_yh8r4")
+polygon = PackedVector2Array(-495, -172.5, -104, -162.5, 20, -83.5, 230, -103.5, 384, -219.5, 526, -244.5, 659, -133.5, 778, -53.5, 790, 251.5, -666, 242.5, -656, -88.5)
+uv = PackedVector2Array(-495, -172.5, -104, -162.5, 20, -83.5, 240, -73.5, 376, -247.5, 567, -249.5, 679, -104.5, 778, -53.5, 790, 251.5, -666, 242.5, -656, -88.5)

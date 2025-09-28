@@ -6,8 +6,8 @@ colors = PackedColorArray(0.39607844, 0.3137255, 0.34117648, 1, 0.42745098, 0.55
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_0mgb0"]
 gradient = SubResource("Gradient_fwceb")
-width = 640
-height = 360
+width = 1920
+height = 1080
 fill_to = Vector2(0, 1)
 
 [node name="SkySprite" type="Sprite2D"]

@@ -1,10 +1,14 @@
-[gd_scene load_steps=17 format=3 uid="uid://bc65orfiey1rx"]
+[gd_scene load_steps=18 format=3 uid="uid://bc65orfiey1rx"]
 
 [ext_resource type="Texture2D" uid="uid://nu4dteuv62xh" path="res://assets/bird_2_brown_1.png" id="1_ax6rl"]
 [ext_resource type="Script" uid="uid://cceknkw7tydix" path="res://stork.gd" id="1_b00bf"]
 [ext_resource type="AudioStream" uid="uid://bwi0y6f1cj2kh" path="res://assets/up.wav" id="3_e5lgo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b00bf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a08cq"]
+atlas = ExtResource("1_ax6rl")
+region = Rect2(0, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_evco4"]
 atlas = ExtResource("1_ax6rl")
@@ -52,6 +56,14 @@ region = Rect2(64, 224, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6pbdk"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a08cq")
+}],
+"loop": true,
+"name": &"dive",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_evco4")
@@ -148,9 +160,8 @@ shape = SubResource("CircleShape2D_b00bf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_6pbdk")
-animation = &"walk"
+animation = &"dive"
 autoplay = "glide"
-frame_progress = 0.78299904
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
